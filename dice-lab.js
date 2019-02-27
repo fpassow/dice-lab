@@ -22,3 +22,15 @@ function sum(n, die) {
         return sum
     }
 }
+
+/*
+ * Returns the average of n rolls of the given die.
+ * Note: This returns a number, not a function.
+ */
+function avj(n, die) {
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+        sum += die()
+    }
+    return sum/n
+}
