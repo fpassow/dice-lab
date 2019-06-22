@@ -36,7 +36,7 @@ function avj(n, die) {
 }
 
 /*
- * Return a function that executes any of its arguments which are functions, and compares the results.
+ * Functions below return a function that executes any of its arguments which are functions, and compares the results.
  */
 function gt(x, y) {
     return function() {
@@ -67,9 +67,10 @@ function _evalify(x) {
 }
 
 /*
- * Takes a single argumnet function as the their arg.
- * For each integer from fist to last, inclusive, calls the given
- *    function and adds the result to an array where the array index is the input to the function.
+ * For each integer from "first" to "last", inclusive, call the function "func"
+ *    and add the result to an array, where the array index is the input to the function.
+ *
+ * This is the first step toward drawing a graph.
  */
 function scan(first, last, func) {
     out = []
